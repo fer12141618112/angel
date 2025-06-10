@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuidado y Preservación del Medio Ambiente</title>
+  <style>
+    body {
+      background-image: url('imagen1.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #fff600;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      color: #333;
+    }
+
+    nav {
+      background-color: #ffeb3b;
+      padding: 10px;
+    }
+
+    nav button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #ffd700;
+      border: none;
+      border-radius: 5px;
+    }
+
+    section {
+      display: none;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 20px auto;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    img, video {
+      max-width: 100%;
+      height: auto;
+      margin-top: 15px;
+    }
+
+    audio {
+      margin-top: 15px;
+    }
+
+    p {
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Cuidado y Preservación del Medio Ambiente</h1>
+</header>
+
+<nav>
+  <button onclick="mostrar('intro')">Introducción</button>
+  <button onclick="mostrar('interna')">Limpieza Interna</button>
+  <button onclick="mostrar('institucional')">Limpieza Institucional</button>
+  <button onclick="mostrar('reforestacion')">Reforestación</button>
+  <button onclick="mostrar('fauna')">Flora y Fauna</button>
+</nav>
+
+<section id="intro" class="active">
+  <h2>Introducción</h2>
+  <p>La protección del medio ambiente es una responsabilidad compartida. Todos podemos aportar con acciones pequeñas pero significativas para reducir el impacto ambiental y preservar los recursos naturales.</p>
+  <img src="imagen1.jpg" alt="Imagen sobre el medio ambiente">
+</section>
+
+<section id="interna">
+  <h2>Limpieza Interna</h2>
+  <p>Las tareas de limpieza dentro de las instituciones educativas fortalecen el sentido de responsabilidad y fomentan el orden.</p>
+  <img src="gif.gif" alt="GIF de limpieza interna">
+</section>
+
+<section id="institucional">
+  <h2>Limpieza Institucional</h2>
+  <p>Participar en jornadas de limpieza institucional promueve valores como el respeto, el trabajo en equipo y la conservación del entorno.</p>
+  <audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+  </audio>
+</section>
+
+<section id="reforestacion">
+  <h2>Reforestación</h2>
+  <p>Sembrar árboles ayuda a capturar CO₂, proporciona sombra, mejora el aire y conserva la biodiversidad. Es una de las acciones más efectivas contra el cambio climático.</p>
+  <video controls>
+    <source src="video.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
+</section>
+
+<section id="fauna">
+  <h2>Flora y Fauna</h2>
+  <p>Preservar la flora y fauna es vital para mantener el equilibrio ecológico. Cada ser vivo cumple un rol importante en su hábitat.</p>
+  <img src="imagen2.jpg" alt="Imagen de flora y fauna">
+</section>
+
+<script>
+  function mostrar(id) {
+    const secciones = document.querySelectorAll("section");
+    secciones.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+</script>
+
+</body>
+</html>
